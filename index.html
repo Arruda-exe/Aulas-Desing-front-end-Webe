@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!--
+    Trabalho Web Básico - Concessionária AutoPrime
+    Integrantes:
+    - Kauan Arruda Verlinck - RGM: 47571845
+-->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoPrime Veículos | Início</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho com logo e menu de navegação (usa Flexbox) -->
+    <header class="cabecalho" id="topo">
+        <a href="index.html" class="logo">AutoPrime</a>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html" class="ativo">Início</a></li>
+                <li><a href="estoque.html">Estoque</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Seção de destaque com a imagem principal do carro -->
+        <section class="hero">
+            <div class="hero-texto">
+                <p class="hero-subtitulo">NOVO PORSCHE</p>
+                <h1>Panamera</h1>
+                <p class="hero-frase">Esportivo no desempenho. Sedã no conforto.</p>
+
+                <div class="hero-botoes">
+                    <a href="#ficha" class="botao botao-principal">Saiba mais</a>
+                    <a href="#contato" class="botao botao-secundario">Agende um test drive</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ficha técnica: imagem e tabela lado a lado (usa Grid) -->
+        <section class="ficha" id="ficha">
+            <h2>Ficha técnica</h2>
+
+            <div class="ficha-conteudo">
+                <figure>
+                    <img src="img/carro3.webp" alt="Porsche Panamera cinza visto de perfil, estacionado">
+                    <figcaption>Porsche Panamera - vista lateral</figcaption>
+                </figure>
+
+                <table>
+                    <caption>Especificações do Panamera</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Item</th>
+                            <th scope="col">Especificação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Motor</td>
+                            <td>2.9 V6 biturbo</td>
+                        </tr>
+                        <tr>
+                            <td>Potência</td>
+                            <td>353 cv</td>
+                        </tr>
+                        <tr>
+                            <td>Câmbio</td>
+                            <td>PDK 8 marchas</td>
+                        </tr>
+                        <tr>
+                            <td>0 a 100 km/h</td>
+                            <td>5,1 s</td>
+                        </tr>
+                        <tr>
+                            <td>Velocidade máxima</td>
+                            <td>272 km/h</td>
+                        </tr>
+                        <tr>
+                            <td>Preço</td>
+                            <td>A partir de R$ 800.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Detalhes do carro: texto e imagem lado a lado-->
+        <section class="detalhes">
+            <article class="detalhes-texto">
+                <h2>Design que chama atenção</h2>
+                <p>
+                    Linhas esportivas, faróis em LED e rodas de liga leve de até 21 polegadas.
+                    O Panamera une a esportividade de um Porsche com o espaço de um sedã de quatro portas.
+                </p>
+                <a href="estoque.html" class="botao botao-principal">Ver estoque</a>
+            </article>
+
+            <figure class="detalhes-imagem">
+                <img src="img/carro2.webp" alt="Porsche Panamera estacionado na rua com reflexo das árvores no capô">
+            </figure>
+        </section>
+
+    </main>
+
+    <!-- Rodapé com endereço, links e copyright-->
+    <footer class="rodape" id="contato">
+        <address>
+            <strong>AutoPrime Veículos</strong><br>
+            Av. Exemplo, 1000 - Curitiba/PR<br>
+            <!--
+                tel: abre o discador do celular.
+                Referência: https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/a
+            -->
+            Telefone: <a href="tel:+554130000000">(41) 3000-0000</a>
+        </address>
+
+        <nav class="rodape-links">
+            <a href="index.html">Início</a>
+            <a href="estoque.html">Estoque</a>
+            <a href="#topo">Voltar ao topo</a>
+        </nav>
+        <p class="copyright">Copyright&copy;-2026</p>
+    </footer>
+
+</body>
+
+</html>

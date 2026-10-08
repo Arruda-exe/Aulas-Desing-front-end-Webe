@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoPrime Veículos | Estoque</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho igual ao das outras páginas -->
+    <header class="cabecalho" id="topo">
+        <a href="index.html" class="logo">AutoPrime</a>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="estoque.html" class="ativo">Estoque</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Título da página -->
+        <section class="titulo-pagina">
+            <h1>Nosso estoque</h1>
+            <p>Veículos revisados e com procedência garantida.</p>
+        </section>
+
+        <!-- Lista de carros em cards (usa Grid) -->
+        <section class="estoque">
+            <h2>Veículos disponíveis</h2>
+
+            <div class="lista-carros">
+                <article class="card">
+                    <figure>
+                        <img src="img/carro1.webp" alt="Porsche Panamera Turbo preto na estrada, visto de trás">
+                    </figure>
+                    <h3>Panamera Turbo</h3>
+                    <p>2021 - 28.000 km</p>
+                    <p class="preco">R$ 720.000</p>
+                    <a href="#contato" class="botao botao-principal">Tenho interesse</a>
+                </article>
+
+                <article class="card">
+                    <figure>
+                        <img src="img/carro2.webp" alt="Porsche Panamera 4 grafite estacionado na rua">
+                    </figure>
+                    <h3>Panamera 4</h3>
+                    <p>2022 - 35.000 km</p>
+                    <p class="preco">R$ 560.000</p>
+                    <a href="#contato" class="botao botao-principal">Tenho interesse</a>
+                </article>
+
+                <article class="card">
+                    <figure>
+                        <img src="img/carro3.webp" alt="Porsche Panamera cinza visto de perfil">
+                    </figure>
+                    <h3>Panamera</h3>
+                    <p>2024 - 0 km</p>
+                    <p class="preco">R$ 800.000</p>
+                    <a href="#contato" class="botao botao-principal">Tenho interesse</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Tabela comparando os carros do estoque -->
+        <section class="comparativo">
+            <h2>Comparativo</h2>
+
+            <table>
+                <caption>Comparativo dos veículos em estoque</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Modelo</th>
+                        <th scope="col">Ano</th>
+                        <th scope="col">Quilometragem</th>
+                        <th scope="col">Câmbio</th>
+                        <th scope="col">Cor</th>
+                        <th scope="col">Preço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Panamera Turbo</td>
+                        <td>2021</td>
+                        <td>28.000 km</td>
+                        <td>PDK 8 marchas</td>
+                        <td>Preto</td>
+                        <td>R$ 720.000</td>
+                    </tr>
+                    <tr>
+                        <td>Panamera 4</td>
+                        <td>2022</td>
+                        <td>35.000 km</td>
+                        <td>PDK 8 marchas</td>
+                        <td>Grafite</td>
+                        <td>R$ 560.000</td>
+                    </tr>
+                    <tr>
+                        <td>Panamera</td>
+                        <td>2024</td>
+                        <td>0 km</td>
+                        <td>PDK 8 marchas</td>
+                        <td>Cinza</td>
+                        <td>R$ 800.000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <!-- Rodapé igual ao das outras páginas -->
+    <footer class="rodape" id="contato">
+        <address>
+            <strong>AutoPrime Veículos</strong><br>
+            Av. Exemplo, 1000 - Curitiba/PR<br>
+            <!--
+                tel: abre o discador do celular. Foi usado no lugar de um formulário de contato,
+                que não é permitido neste trabalho.
+                Referência: https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/a
+            -->
+            Telefone: <a href="tel:+554130000000">(41) 3000-0000</a>
+        </address>
+
+        <nav class="rodape-links">
+            <a href="index.html">Início</a>
+            <a href="estoque.html">Estoque</a>
+            <a href="#topo">Voltar ao topo</a>
+        </nav>
+
+        <p class="creditos">
+            Imagens: <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>

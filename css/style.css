@@ -1,0 +1,335 @@
+/* Reset básico: remove margens padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1a1a1a;
+    background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*
+    gap: define o espaço entre os itens do Flexbox e do Grid sem precisar de margin.
+    Referência: https://developer.mozilla.org/pt-BR/docs/Web/CSS/gap
+*/
+
+/* Cabeçalho: logo à esquerda e menu à direita (Flexbox) */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 60px;
+    background-color: #0d0d0d;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Menu com os links um ao lado do outro (Flexbox) */
+.menu ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+.menu a {
+    color: #ffffff;
+    font-size: 16px;
+    padding-bottom: 4px;
+}
+
+/* Destaca o link da página atual e o link com o mouse em cima */
+.menu a:hover,
+.menu a.ativo {
+    border-bottom: 2px solid #ffffff;
+}
+
+/*
+    Seção de destaque com a imagem de fundo.
+    vh: altura em relação à tela (90vh = 90% da altura da tela).
+    linear-gradient: camada escura sobre a foto para o texto branco ficar legível.
+    background-size: cover: faz a imagem preencher a seção sem distorcer.
+    Referências:
+    https://developer.mozilla.org/pt-BR/docs/Web/CSS/length
+    https://developer.mozilla.org/pt-BR/docs/Web/CSS/gradient/linear-gradient
+    https://developer.mozilla.org/pt-BR/docs/Web/CSS/background-size
+*/
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.1)),
+        url("../img/carro1.webp");
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+
+.hero-subtitulo {
+    font-size: 18px;
+    letter-spacing: 12px;
+}
+
+.hero h1 {
+    font-size: 120px;
+    font-weight: 300;
+}
+
+.hero-frase {
+    font-size: 26px;
+    margin-bottom: 40px;
+}
+
+/* Botões do destaque um ao lado do outro (Flexbox) */
+.hero-botoes {
+    display: flex;
+    gap: 24px;
+}
+
+/*
+    Links com aparência de botão.
+    border-radius: arredonda os cantos.
+    Referência: https://developer.mozilla.org/pt-BR/docs/Web/CSS/border-radius
+*/
+.botao {
+    display: inline-block;
+    padding: 16px 36px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.botao-principal {
+    background-color: #1c69d4;
+    color: #ffffff;
+}
+
+.botao-principal:hover {
+    background-color: #0f4fa8;
+}
+
+.botao-secundario {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+.botao-secundario:hover {
+    background-color: #ffffff;
+    color: #0d0d0d;
+}
+
+/* Ficha técnica: imagem e tabela lado a lado (Grid) */
+.ficha {
+    padding: 80px 60px;
+}
+
+.ficha h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 48px;
+}
+
+.ficha-conteudo {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.ficha img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+figcaption {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #666666;
+    text-align: center;
+}
+
+/* Estilo das tabelas usadas no site */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+caption {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #dddddd;
+}
+
+th {
+    background-color: #0d0d0d;
+    color: #ffffff;
+}
+
+tbody tr:hover {
+    background-color: #f2f2f2;
+}
+
+/* Detalhes: texto e imagem lado a lado (Flexbox) */
+.detalhes {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 80px 60px;
+    background-color: #0d0d0d;
+    color: #ffffff;
+}
+
+.detalhes-texto {
+    flex: 1;
+}
+
+.detalhes-texto h2 {
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 24px;
+}
+
+.detalhes-texto p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+.detalhes-imagem {
+    flex: 1;
+}
+
+.detalhes-imagem img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Título da página de estoque */
+.titulo-pagina {
+    padding: 80px 60px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-align: center;
+}
+
+.titulo-pagina h1 {
+    font-size: 56px;
+    font-weight: 300;
+    margin-bottom: 16px;
+}
+
+.titulo-pagina p {
+    font-size: 20px;
+    color: #cccccc;
+}
+
+/* Títulos das seções da página de estoque */
+.estoque h2,
+.comparativo h2 {
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Estoque: cards dos carros em 3 colunas (Grid) */
+.estoque {
+    padding: 80px 60px;
+}
+
+.lista-carros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.card {
+    padding: 24px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+}
+
+/*
+    object-fit: cover: deixa todas as fotos dos cards com a mesma altura sem distorcer.
+    Referência: https://developer.mozilla.org/pt-BR/docs/Web/CSS/object-fit
+*/
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin: 16px 0 8px;
+}
+
+.card p {
+    color: #666666;
+    margin-bottom: 8px;
+}
+
+.card .preco {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1a1a1a;
+    margin-bottom: 24px;
+}
+
+/* Tabela comparativa do estoque */
+.comparativo {
+    padding: 0 60px 80px;
+}
+
+/* Rodapé: endereço, links e créditos lado a lado (Flexbox) */
+.rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 60px;
+    background-color: #1a1a1a;
+    color: #cccccc;
+}
+
+.rodape address {
+    font-style: normal;
+    line-height: 1.6;
+}
+
+.rodape-links {
+    display: flex;
+    gap: 24px;
+}
+
+.rodape a {
+    color: #cccccc;
+}
+
+.rodape a:hover {
+    color: #ffffff;
+}
+
+.creditos {
+    font-size: 14px;
+}
