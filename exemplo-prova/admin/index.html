@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Administrativa</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./login.js" defer></script>
+</head>
+<body>
+<div>
+    <nav class="menuLateral">
+        <h2>Menu</h2>
+        <a href="./index.html">cadastro</a>
+    </nav>
+    <main>
+        <header>
+            <a href="#" id="logout"> Sair</a>
+        </header>
+        <section id="cadastro">
+            
+            <h2>Cadastro de Produto</h2>
+            <form id="formProduto">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome"><br>
+
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" name="quantidade" min="1"><br>
+
+                <label for="preco">Preço:</label>
+                <input type="text" id="preco" name="preco"><br>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email"><br>
+
+                <label for="dataValidade">Data de Validade:</label>
+                <input type="date" id="dataValidade" name="dataValidade"><br>
+
+                <label for="disponivel">Disponível em estoque:</label>
+                <input type="checkbox" id="disponivel" name="disponivel" value="sim"><br>
+
+                <button type="reset">Limpar</button>
+                <button type="submit">Cadastrar</button>
+            </form>
+
+            <h2>Produtos Cadastrados</h2>
+            <table id="tabela">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Quantidade</th>
+                        <th>Preço</th>
+                        <th>E-mail</th>
+                        <th>Validade</th>
+                        <th>Disponível?</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>&nbsp;</tbody>
+            </table>
+        </section>
+    </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
