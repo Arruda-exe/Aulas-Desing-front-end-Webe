@@ -1,0 +1,47 @@
+<!-- Declara que o documento usa HTML5 -->
+<!DOCTYPE html>
+<!-- Elemento raiz da página; lang="pt-br" informa ao navegador e leitores de tela que o conteúdo está em português -->
+<html lang="pt-br">
+<!-- <head>: informações sobre a página que não aparecem diretamente no conteúdo -->
+<head>
+    <!-- Codificação de caracteres UTF-8, para exibir acentos (é, ç, ã...) corretamente -->
+    <meta charset="UTF-8">
+    <!-- Faz a página se adaptar à largura da tela em celulares (design responsivo) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Texto que aparece na aba do navegador -->
+    <title>Home</title>
+    <!-- Liga o arquivo de estilos CSS compartilhado pelas duas páginas -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- <body>: tudo o que é exibido na tela -->
+<body>
+    <!-- Cabeçalho da página com o título principal -->
+    <header>
+        <h1>Home</h1>
+    </header>
+
+    <!-- Menu de navegação: links para as páginas do site -->
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+
+    <!-- Conteúdo principal da página -->
+    <main>
+        <!-- Caixa cinza (classe "caixa" estilizada no style.css) com o texto "Sobre mim" -->
+        <div class="caixa">
+            <h2>Sobre mim</h2>
+            <!-- Texto de exemplo (Lorem ipsum) a ser substituído pelo texto real -->
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda vitae accusantium quaerat, in corporis, rem maiores, possimus accusamus minima labore minus facilis quas repellendus nesciunt alias totam perspiciatis quam dignissimos.</p>
+        </div>
+    </main>
+
+    <!-- Rodapé; &copy; gera o símbolo © -->
+    <footer>
+        <p>&copy; 2025 RGM - Nome Completo</p>
+    </footer>
+
+    <!-- Carrega o JavaScript no final do body, para que o HTML já esteja carregado quando o script rodar -->
+    <script src="script.js"></script>
+</body>
+</html>

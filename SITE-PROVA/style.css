@@ -1,0 +1,97 @@
+/* ===== Estilos gerais (valem para todas as páginas) ===== */
+
+/* Corpo da página: define a fonte padrão e remove a margem que o navegador coloca por padrão */
+body {
+    font-family: Arial, sans-serif; /* Usa Arial; se não existir, qualquer fonte sem serifa */
+    margin: 0;
+}
+
+/* Regras em comum para cabeçalho, menu e rodapé (vírgula = aplica a todos) */
+header,
+nav,
+footer {
+    color: white;       /* Texto branco */
+    text-align: center; /* Conteúdo centralizado */
+    padding: 10px;      /* Espaço interno de 10px em todos os lados */
+}
+
+/* Cabeçalho com fundo cinza escuro */
+header {
+    background-color: #333;
+}
+
+/* Menu e rodapé com fundo cinza um pouco mais claro */
+nav,
+footer {
+    background-color: #555;
+}
+
+/* Links dentro do menu (seletor "nav a" = todo <a> que está dentro de <nav>) */
+nav a {
+    color: white;
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    font-weight: bold;     /* Negrito */
+    margin: 0 20px;        /* 0 em cima/embaixo e 20px nas laterais, separando os links */
+}
+
+/* :hover = quando o mouse passa por cima do link, ele fica cinza claro */
+nav a:hover {
+    color: #ddd;
+}
+
+/* Área de conteúdo principal com espaço interno */
+main {
+    padding: 20px;
+}
+
+/* ===== Página inicial ===== */
+
+/* Caixa do "Sobre mim": fundo cinza claro e cantos arredondados */
+.caixa {
+    padding: 20px;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+/* ===== Página de contato ===== */
+
+/* Container do formulário + imagem: flexbox coloca os filhos lado a lado (em linha) */
+.detalhes {
+    display: flex;
+    gap: 40px; /* Espaço de 40px entre o formulário e a imagem */
+}
+
+/* Formulário também em flexbox, mas em coluna: cada label/campo fica um embaixo do outro */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;     /* Espaço entre cada elemento do formulário */
+    width: 300px; /* Largura fixa do formulário */
+}
+
+/* Campos e botão: espaço interno e mesma fonte do resto da página
+   (por padrão, inputs e botões não herdam a fonte do body) */
+input,
+textarea,
+button {
+    padding: 8px;
+    font-family: inherit;
+}
+
+/* Botão de enviar: fundo escuro, texto branco, sem borda e cursor de "mãozinha" */
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Botão clareia quando o mouse passa por cima */
+button:hover {
+    background-color: #555;
+}
+
+/* Imagem da página de contato nunca ultrapassa a largura do espaço disponível */
+.detalhes img {
+    max-width: 100%;
+}

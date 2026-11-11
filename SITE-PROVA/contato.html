@@ -1,0 +1,70 @@
+<!-- Declara que o documento usa HTML5 -->
+<!DOCTYPE html>
+<!-- Elemento raiz; lang="pt-br" indica que o conteúdo está em português -->
+<html lang="pt-br">
+<!-- <head>: configurações da página (não aparecem no conteúdo) -->
+<head>
+    <!-- Codificação UTF-8 para exibir acentos corretamente -->
+    <meta charset="UTF-8">
+    <!-- Adapta a página à largura da tela do dispositivo (responsividade) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título exibido na aba do navegador -->
+    <title>Contato</title>
+    <!-- Usa o mesmo arquivo CSS da página inicial, mantendo o visual igual -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho com o título da página -->
+    <header>
+        <h1>Contato</h1>
+    </header>
+
+    <!-- Menu de navegação (igual ao da página inicial) -->
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <h2>Fale comigo</h2>
+
+        <!-- Container "detalhes": usa flexbox (ver style.css) para deixar o formulário e a imagem lado a lado -->
+        <div class="detalhes">
+            <!-- Formulário de contato. Sem "action", ao enviar ele apenas recarrega a página (não envia para nenhum servidor) -->
+            <form>
+                <!-- O atributo "for" do label aponta para o "id" do campo; clicar no texto foca o campo -->
+                <label for="nome">Nome completo</label>
+                <!-- Campo de texto; "required" impede o envio se estiver vazio -->
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">E-mail</label>
+                <!-- type="email" faz o navegador validar se o texto tem formato de e-mail -->
+                <input type="email" id="email" name="email" required>
+
+                <label for="assunto">Assunto</label>
+                <!-- Campo opcional (sem "required") -->
+                <input type="text" id="assunto" name="assunto">
+
+                <label for="mensagem">Mensagem</label>
+                <!-- Área de texto com várias linhas; rows="5" define a altura inicial de 5 linhas -->
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+                <!-- Botão que envia o formulário (dispara a validação dos campos "required") -->
+                <button type="submit">Enviar</button>
+            </form>
+
+            <!-- Imagem ao lado do formulário; "alt" é o texto alternativo para acessibilidade ou se a imagem não carregar -->
+            <img src="contato.jpg" alt="Imagem de contato">
+        </div>
+    </main>
+
+    <!-- Rodapé; &copy; gera o símbolo © -->
+    <footer>
+        <p>&copy; 2025 RGM - Nome Completo</p>
+    </footer>
+
+    <!-- Carrega o JavaScript depois que todo o HTML foi lido -->
+    <script src="script.js"></script>
+</body>
+</html>
